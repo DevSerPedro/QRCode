@@ -1,0 +1,172 @@
+/* Importações */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* Geral */
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Roboto;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 10px;
+    background-color: #34db7a;
+}
+
+.hide {
+    display: none;
+}
+
+/* Container */
+
+.container {
+    overflow: hidden;
+    background-color: #fff;
+    /* height: 260px; */
+    min-width: 350px;
+    max-width: 910px;
+    border-radius: 10px;
+    padding: 20px;
+    transition: 0.2s;
+}
+
+.container.active {
+    /* height: 600px; */
+}
+
+#qr-header {
+    /* text-align: center; */
+}
+
+#qr-header h1 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+#qr-header p {
+    color: #444;
+    font-size: 0.9rem;
+}
+
+/* Formulario */
+
+#qr-form {
+    display: flex;
+    flex-direction: column;
+
+    position: relative;
+
+    margin: 20px 15px;
+}
+
+#qr-form #to-sender {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+#qr-form #to-sender input[type="text"] {
+    flex: 1;
+
+    padding: 10px 15px;
+    height: 55px;
+
+    border: 2px solid #388f52;
+    border-radius: 5px 0 0 5px;
+}
+
+#qr-form #to-sender label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 55px;
+    height: 55px;
+
+    cursor: pointer;
+
+    background-color: #388f52;
+    border-radius: 0 5px 5px 0;
+    font-size: 16px;
+    color: #fff;
+    transition: 0.5s;
+}
+
+#qr-form #to-sender label:hover {
+    color: #000;
+}
+#qr-form #to-sender label:active i{
+    transform: scale(1.1);
+}
+
+#qr-form button {
+    height: 55px;
+    border: none;
+    border-radius: 5px;
+    font-size: 0.9rem;
+}
+
+#qr-form button {
+    background-color: #086824;
+    color: #fff;
+    font-size: 1.2rem;
+    margin-top: 20px;
+    cursor: pointer;
+    opacity: 0.6;
+    transition: 0.4s;
+}
+
+#qr-form button:hover {
+    opacity: 1;
+}
+
+/* Area dos QR Code */
+
+#qr-code {
+    overflow: auto;
+
+    display: flex;
+    /* flex-wrap: wrap; */
+    justify-content: flex-start;
+
+    padding: 10px;
+    margin: 20px 15px;
+    gap: 10px;
+
+    opacity: 0;
+    background-color: #ebebeb;
+    border: 2px solid #388f52bb;
+    border-radius: 5px;
+
+    transition: 0.5s;
+}
+
+#qr-code article {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 15px;
+    background-color: #fff;
+}
+
+#qr-code article h3 {
+    margin-bottom: 15px;
+}
+
+#qr-code article p {
+    margin-top: 15px;
+}
+
+
+.container.active #qr-code {
+    opacity: 1;
+}
